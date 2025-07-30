@@ -5,7 +5,6 @@ body {
     background-color: #f4f4f4;
     position: relative;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -14,18 +13,15 @@ header {
     background-color: #004aad;
     color: white;
 }
-
 .logo {
     height: 50px;
     display: flex;
     align-items: center;
 }
-
 .logo svg {
     width: 100%;
     height: 100%;
 }
-
 .login-container {
     max-width: 400px;
     margin: 50px auto;
@@ -37,7 +33,6 @@ header {
     position: relative;
     overflow: hidden;
 }
-
 .bg-image {
     position: absolute;
     top: 0;
@@ -46,34 +41,21 @@ header {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    opacity: 0; /* Disable until assets are added */
 }
-
 .animated {
     animation: float 10s infinite;
 }
-
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
-
-.bg-image:first-child {
-    opacity: 0.3; /* Bank background as base layer */
-}
-
-.bg-image:nth-child(2),
-.bg-image:nth-child(3) {
-    opacity: 0.2; /* American and French man images */
-    animation-delay: 2s, 5s; /* Staggered animation */
-}
-
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 button {
     padding: 10px;
     background-color: #004aad;
@@ -82,37 +64,30 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-
 button:hover {
     background-color: #003087;
 }
-
 .hidden {
     display: none;
 }
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
 #loading {
     animation: spin 1s linear infinite;
 }
-
 .card {
     font-family: monospace;
     font-size: 1.2em;
     margin: 20px 0;
 }
-
 .actions, .broker-panel, .transactions, .support, .loan {
     margin: 20px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
 }
-
 .chat-container {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -122,44 +97,36 @@ button:hover {
     background-color: #f9f9f9;
     margin-bottom: 10px;
 }
-
 .chat-message {
     padding: 5px;
     margin: 5px 0;
     border-radius: 5px;
 }
-
 .chat-message.user {
     background-color: #004aad;
     color: white;
     text-align: right;
 }
-
 .chat-message.bot {
     background-color: #e0e0e0;
     text-align: left;
 }
-
 .crypto-trading {
     margin-top: 20px;
 }
-
 .crypto-trading table {
     width: 100%;
     border-collapse: collapse;
 }
-
 .crypto-trading th, .crypto-trading td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
 }
-
 .crypto-trading th {
     background-color: #004aad;
     color: white;
 }
-
 .notification {
     position: fixed;
     top: 20px;
@@ -171,14 +138,12 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
-
 @media (max-width: 600px) {
     .login-container, .actions, .broker-panel, .transactions, .support, .loan {
         margin: 10px;
         padding: 10px;
     }
 }
-
 .wave-bg {
     position: absolute;
     bottom: 0;
@@ -189,13 +154,9 @@ button:hover {
     opacity: 0.2;
     z-index: -1;
 }
-
 @media (prefers-color-scheme: dark) {
     body { background: #121212; color: white; }
     .wave-bg {
         background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" fill="%23ffffffaa"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"/></svg>');
     }
-    .bg-image:first-child { opacity: 0.3; }
-    .bg-image:nth-child(2),
-    .bg-image:nth-child(3) { opacity: 0.2; }
 }
