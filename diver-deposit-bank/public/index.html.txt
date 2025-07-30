@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diver Deposit Bank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/dark-mode.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg width="150" height="80" viewBox="0 0 150 80" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .logo-text {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 700;
+                        font-size: 24px;
+                        fill: #0a2e52;
+                        text-anchor: middle;
+                    }
+                    .sub-text {
+                        font-size: 12px;
+                        fill: #0a2e52;
+                    }
+                    .underline {
+                        stroke: url(#gradient);
+                        stroke-width: 2;
+                        stroke-linecap: round;
+                    }
+                </style>
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#0a2e52;" />
+                        <stop offset="100%" style="stop-color:#f9c80e;" />
+                    </linearGradient>
+                </defs>
+                <text x="75" y="30" class="logo-text">DIVER</text>
+                <text x="75" y="50" class="sub-text">DEPOSITS</text>
+                <text x="75" y="65" class="sub-text" style="font-size: 10px;">BANK</text>
+                <line x1="25" y1="70" x2="125" y2="70" class="underline" />
+            </svg>
+        </div>
+        <div id="translator">
+            <select id="language-select" data-i18n="language">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <option value="ko">Korean</option>
+                <option value="zh">Chinese</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <img src="/assets/american-man.jpg" alt="American Man" class="bg-image">
+            <img src="/assets/french-man.jpg" alt="French Man" class="bg-image">
+            <h1 data-i18n="welcome">Welcome to Diver Deposit Bank</h1>
+            <p data-i18n="since">Serving customers since 1998</p>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" data-i18n-placeholder="username" required>
+                <input type="password" id="password" placeholder="Password" data-i18n-placeholder="password" required>
+                <input type="text" id="security-code" placeholder="What's your security code?" data-i18n-placeholder="security_code" required>
+                <input type="text" id="favorite-food" placeholder="What's your favorite food?" data-i18n-placeholder="favorite_food" required>
+                <button type="submit" data-i18n="login">Login</button>
+                <p><a href="mailto:diver.deposit@inbox.ru" data-i18n="support_contact">Contact our 24/7 customer support team</a></p>
+            </form>
+            <div id="loading" class="hidden">🔄 Processing...</div>
+            <div id="error" class="hidden" data-i18n="invalid">❎ Invalid credentials</div>
+            <div id="success" class="hidden">✅ Login successful</div>
+        </div>
+    </main>
+    <div class="wave-bg"></div>
+    <script src="/js/i18next.min.js"></script>
+    <script src="/js/jspdf.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
