@@ -1,11 +1,9 @@
 [build]
-  command = "pip install -r requirements.txt"
+  command = "npm install && pip install -r requirements.txt"
   publish = "public"
-
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/app/:splat"
   status = 200
-
 [functions]
   directory = "functions"
