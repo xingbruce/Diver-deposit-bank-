@@ -2,9 +2,7 @@
   "name": "diver-deposit-bank",
   "version": "1.0.0",
   "description": "Mock banking app for Diver Deposit Bank",
-  "scripts": {
-    "install-libs": "npm install @supabase/supabase-js i18next jspdf"
-  },
+  "scripts": { "install-libs": "npm install @supabase/supabase-js i18next jspdf" },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
     "i18next": "^23.15.1",
